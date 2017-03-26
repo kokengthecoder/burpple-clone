@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import RestaurantHeader from './RestaurantHeader';
+import PlaceHeader from './PlaceHeader';
+import PlaceNav from './PlaceNav';
 
 class RestaurantDetail extends Component {
 	render() {
 		return (
-			<RestaurantHeader />
+			<div>
+				<PlaceHeader />
+				<PlaceNav />
+			</div>
 		)
 	}
 }

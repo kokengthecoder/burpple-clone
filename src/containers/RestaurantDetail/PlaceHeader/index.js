@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Image, Header } from 'semantic-ui-react';
 import faker from 'faker';
 
-const RestaurantHeader = () => {
+const PlaceHeader = () => {
 	return(
 		<div>
 			<div className="header-img">
@@ -23,4 +23,4 @@ const RestaurantHeader = () => {
 	)
 }
 
-export default RestaurantHeader;
+export default PlaceHeader;
