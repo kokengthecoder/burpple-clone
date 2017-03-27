@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PlaceHeader from './PlaceHeader';
 import PlaceNav from './PlaceNav';
+import PlaceAbout from './PlaceAbout';
 
 class RestaurantDetail extends Component {
 	render() {
@@ -8,6 +9,7 @@ class RestaurantDetail extends Component {
 			<div>
 				<PlaceHeader />
 				<PlaceNav />
+				<PlaceAbout />
 			</div>
 		)
 	}
