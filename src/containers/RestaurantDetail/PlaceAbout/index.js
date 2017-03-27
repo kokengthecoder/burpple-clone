@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Segment } from 'semantic-ui-react';
-import faker from 'faker';
 
 class PlaceAbout extends Component {
 	render() {
