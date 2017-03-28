@@ -22,3 +22,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+@media screen and (min-width: 320px) {
+  .ui .card .content  {
+    font-size: 80% !important;
+  }
+
+  .ui .feed .content {
+    font-size: 80% !important;
+  }
+
+}

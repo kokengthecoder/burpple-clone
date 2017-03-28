@@ -3,6 +3,7 @@ import PlaceHeader from './PlaceHeader';
 import PlaceNav from './PlaceNav';
 import PlaceAbout from './PlaceAbout';
 import PlaceFood from './PlaceFood';
+import PlaceReview from './PlaceReview';
 
 class RestaurantDetail extends Component {
 	render() {
@@ -12,6 +13,7 @@ class RestaurantDetail extends Component {
 				<PlaceNav />
 				<PlaceAbout />
 				<PlaceFood />
+				<PlaceReview />
 			</div>
 		)
 	}

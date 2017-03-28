@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Segment, Card, Grid, Label, Image } from 'semantic-ui-react';
 import faker from 'faker';
-import './index.css';
 
 class PlaceFood extends Component {
 
