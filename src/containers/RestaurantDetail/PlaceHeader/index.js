@@ -5,7 +5,7 @@ import faker from 'faker';
 const PlaceHeader = () => {
 	return(
 		<div>
-			<div className="header-img">
+			<div>
 				<Image src={faker.image.food()} fluid />
 			</div>
 			<div>
@@ -14,8 +14,8 @@ const PlaceHeader = () => {
 						<Image src={faker.image.food()} fluid />
 					</Grid.Column>					
 					<Grid.Column mobile={10} >
-						<Header as="h4">{faker.company.companyName()}</Header>
-						<span><small>53 reviews &bull; 103 wishlisted</small></span>
+						<Header as="h3">{faker.company.companyName()}</Header>
+						<span>53 reviews &bull; 103 wishlisted</span>
 					</Grid.Column>
 				</Grid>
 			</div>

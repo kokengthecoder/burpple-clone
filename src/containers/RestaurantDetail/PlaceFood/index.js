@@ -12,12 +12,12 @@ class PlaceFood extends Component {
 				</h4>
 				<Grid columns={2}>
 					<Grid.Column>
-						<Card>
+						<Card fluid>
 							<Image src={faker.image.food()} />
 							<Label basic attached="top right" size="tiny">$12.00</Label>
 							<Card.Content>
 								<Card.Header>
-									Risotto
+									{faker.lorem.words()}
 								</Card.Header>
 								<Card.Meta>
 									12 reviews

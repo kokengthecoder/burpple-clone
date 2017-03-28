@@ -9,15 +9,15 @@ export default function ReviewCard(props) {
 					<Feed.Event>
 						<Feed.Label image={props.data.reviwer.logo} />
 						<Feed.Content>
+							<Feed.Date>
+								{props.data.date}
+							</Feed.Date>
 							<Feed.Summary>
 								<a>{props.data.reviwer.name}</a>
 								<small>&nbsp; at</small>
 								<Icon name="marker" size="small" /> 
 								<a>{props.data.location}</a>
 							</Feed.Summary>
-							<Feed.Date>
-								{props.data.date}
-							</Feed.Date>
 						</Feed.Content>
 					</Feed.Event>
 				</Feed>
