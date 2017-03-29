@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PlaceHeader from './PlaceHeader';
+import PlaceHeader from '../../components/PlaceHeader';
 import PlaceNav from './PlaceNav';
 import PlaceAbout from '../../components/PlaceAbout';
 import PlaceFood from '../../components/PlaceFood';
@@ -18,7 +18,9 @@ const data = {
 		country: faker.address.country(),
 		phone: faker.phone.phoneNumber(),
 		description: faker.lorem.sentences(),
-		website: faker.internet.domainName()
+		website: faker.internet.domainName(),
+		total_reviews: faker.random.number(),
+		total_wishlisted: faker.random.number()
 	},
 	foods: [{
 		name: faker.lorem.words(),
@@ -74,7 +76,7 @@ class RestaurantDetail extends Component {
 	render() {
 		return (
 			<div>
-				<PlaceHeader />
+				<PlaceHeader place={data.place} />
 				<PlaceNav />
 				<PlaceAbout place={data.place} />
 				<PlaceFood foods={data.foods} />

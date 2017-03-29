@@ -23,13 +23,13 @@
   to { transform: rotate(360deg); }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
   html {
     font-size: 70%;
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (min-width: 360px) {
   html {
     font-size: 80%;
   }
