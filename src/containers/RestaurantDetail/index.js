@@ -3,7 +3,7 @@ import PlaceHeader from './PlaceHeader';
 import PlaceNav from './PlaceNav';
 import PlaceAbout from '../../components/PlaceAbout';
 import PlaceFood from '../../components/PlaceFood';
-//import PlaceReview from './PlaceReview';
+import PlaceReview from './PlaceReview';
 import faker from 'faker';
 
 const data = {
@@ -41,6 +41,31 @@ const data = {
 			description: faker.lorem.paragraphs()
 		},
 		img: faker.image.food(),
+		like: faker.random.number(),
+		date: '3 days ago'
+	},{
+		reviwer: {
+			logo: faker.image.avatar(),
+			name: faker.internet.userName()
+		},
+		content: {
+			title: faker.lorem.sentence(),
+			description: faker.lorem.paragraphs()
+		},
+		img: faker.image.food(),
+		like: faker.random.number(),
+		date: '3 days ago'
+	},{
+		reviwer: {
+			logo: faker.image.avatar(),
+			name: faker.internet.userName()
+		},
+		content: {
+			title: faker.lorem.sentence(),
+			description: faker.lorem.paragraphs()
+		},
+		img: faker.image.food(),
+		like: faker.random.number(),
 		date: '3 days ago'
 	}]
 }
@@ -53,7 +78,7 @@ class RestaurantDetail extends Component {
 				<PlaceNav />
 				<PlaceAbout place={data.place} />
 				<PlaceFood foods={data.foods} />
-				{/*	<PlaceReview /> */}
+				<PlaceReview reviews={data.reviews} place={data.place} />
 			</div>
 		)
 	}

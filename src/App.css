@@ -23,11 +23,16 @@
   to { transform: rotate(360deg); }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 320px) {
   html {
     font-size: 70%;
   }
+}
 
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 80%;
+  }
 }
 
 .ui .card .content .header{
