@@ -1,33 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Menu } from 'semantic-ui-react';
 
-class PlaceNav extends Component {
-	// constructor(props) {
-	// 	super(props);
+const PlaceNav = ({ selectedNav, onNavSelect }) => {
 
-	// 	this.handleItemClick = this.handleItemClick.bind(this);
-	// }
-	state = { activeItem: 'home' }
-
-	handleItemClick = (e, { name }) => {
-		this.setState({ activeItem: name });
+	const handleItemClick = (e, { name }) => {
+		onNavSelect(name);
 	}
 
-	render() {
-
-		const { activeItem } = this.state
-
-		return (
-			<div>
-				<Menu pointing secondary>
-					<Menu.Item name="home" active={activeItem === "home"} onClick={this.handleItemClick} />
-					<Menu.Item name="about" active={activeItem === "about"} onClick={this.handleItemClick} />
-					<Menu.Item name="food" active={activeItem === "food"} onClick={this.handleItemClick} />
-					<Menu.Item name="review" active={activeItem === "review"} onClick={this.handleItemClick} />
-				</Menu>
-			</div>
-		)
-	}
+	return (
+		<div>
+			<Menu pointing secondary>
+				<Menu.Item name="home" active={selectedNav === "home"} onClick={handleItemClick} />
+				<Menu.Item name="about" active={selectedNav === "about"} onClick={handleItemClick} />
+				<Menu.Item name="food" active={selectedNav === "food"} onClick={handleItemClick} />
+				<Menu.Item name="review" active={selectedNav === "review"} onClick={handleItemClick} />
+			</Menu>
+		</div>
+	)
 }
 
 export default PlaceNav;

@@ -6,10 +6,12 @@ import PlaceFood from '../../components/PlaceFood';
 import PlaceReview from './PlaceReview';
 import faker from 'faker';
 
+const foodImg = faker.image.food();
+
 const data = {
 	place: {
-		headerImage: faker.image.food(),
-		logo: faker.image.food(),
+		headerImage: foodImg,
+		logo: foodImg,
 		name: faker.company.companyName(),
 		address1: faker.address.streetAddress(),
 		address2: faker.address.streetName(),
@@ -25,12 +27,12 @@ const data = {
 	foods: [{
 		name: faker.lorem.words(),
 		price: faker.commerce.price(),
-		image: faker.image.food(),
+		image: foodImg,
 		total_reviews: faker.random.number()
 	},{
 		name: faker.lorem.words(),
 		price: faker.commerce.price(),
-		image: faker.image.food(),
+		image: foodImg,
 		total_reviews: faker.random.number()
 	}],
 	reviews: [{
@@ -42,7 +44,7 @@ const data = {
 			title: faker.lorem.sentence(),
 			description: faker.lorem.paragraphs()
 		},
-		img: faker.image.food(),
+		img: foodImg,
 		like: faker.random.number(),
 		date: '3 days ago'
 	},{
@@ -54,7 +56,7 @@ const data = {
 			title: faker.lorem.sentence(),
 			description: faker.lorem.paragraphs()
 		},
-		img: faker.image.food(),
+		img: foodImg,
 		like: faker.random.number(),
 		date: '3 days ago'
 	},{
@@ -66,21 +68,77 @@ const data = {
 			title: faker.lorem.sentence(),
 			description: faker.lorem.paragraphs()
 		},
-		img: faker.image.food(),
+		img: foodImg,
 		like: faker.random.number(),
 		date: '3 days ago'
 	}]
 }
 
 class RestaurantDetail extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			selectedNav: 'home'
+		}
+
+		this.handleNavSelect = this.handleNavSelect.bind(this)
+
+	}
+
+	// pass function to PlaceNav to update the state 
+	handleNavSelect(selectedNav) {
+		this.setState({ selectedNav })
+	}
+
+	renderChild() {
+		switch (this.state.selectedNav) {
+			case 'home':
+				return (
+					<div>
+						<PlaceAbout place={data.place} />
+						<PlaceFood foods={data.foods} />
+						<PlaceReview reviews={data.reviews} place={data.place} />
+					</div>
+				)
+			case 'about':
+				return (
+					<div>
+						<PlaceAbout place={data.place} />
+					</div>
+				)
+			case 'food':
+				return (
+					<div>
+						<PlaceFood foods={data.foods} />
+					</div>
+				)
+			case 'review':
+				return (
+					<div>
+						<PlaceReview reviews={data.reviews} place={data.place} />
+					</div>
+				)
+			default:
+				return (
+					<div>
+						<PlaceAbout place={data.place} />
+						<PlaceFood foods={data.foods} />
+						<PlaceReview reviews={data.reviews} place={data.place} />
+					</div>
+				)
+		}
+
+	}
+
 	render() {
 		return (
 			<div>
 				<PlaceHeader place={data.place} />
-				<PlaceNav />
-				<PlaceAbout place={data.place} />
-				<PlaceFood foods={data.foods} />
-				<PlaceReview reviews={data.reviews} place={data.place} />
+				<PlaceNav 
+					selectedNav={this.state.selectedNav}
+					onNavSelect={this.handleNavSelect} />
+				{this.renderChild()}
 			</div>
 		)
 	}
