@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Card, Image, Icon } from 'semantic-ui-react';
 import './index.css';
 import faker from 'faker';
 
@@ -18,7 +18,10 @@ const SideGuide = () => {
 						</Card.Header>
 					</Card.Content>
 					<Card.Content extra>
-						<p>Burpple Guide</p>
+						<p><small>
+							<Icon name="food" />
+							Burpple Guide
+						</small></p>
 					</Card.Content>
 				</Card>
 
@@ -30,7 +33,10 @@ const SideGuide = () => {
 						</Card.Header>
 					</Card.Content>
 					<Card.Content extra>
-						<p>Burpple Guide</p>
+						<p><small>
+							<Icon name="food" />
+							Burpple Guide
+						</small></p>
 					</Card.Content>
 				</Card>
 
@@ -42,7 +48,10 @@ const SideGuide = () => {
 						</Card.Header>
 					</Card.Content>
 					<Card.Content extra>
-						<p>Burpple Guide</p>
+						<p><small>
+							<Icon name="food" />
+							Burpple Guide
+						</small></p>
 					</Card.Content>
 				</Card>
 
@@ -54,7 +63,10 @@ const SideGuide = () => {
 						</Card.Header>
 					</Card.Content>
 					<Card.Content extra>
-						<p>Burpple Guide</p>
+						<p><small>
+							<Icon name="food" />
+							Burpple Guide
+						</small></p>
 					</Card.Content>
 				</Card>
 
@@ -66,7 +78,10 @@ const SideGuide = () => {
 						</Card.Header>
 					</Card.Content>
 					<Card.Content extra>
-						<p>Burpple Guide</p>
+						<p><small>
+							<Icon name="food" />
+							Burpple Guide
+						</small></p>
 					</Card.Content>
 				</Card>
 			</Card.Group>
