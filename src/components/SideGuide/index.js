@@ -12,7 +12,7 @@ const SideGuide = () => {
 			<Card.Group>
 				<Card link>
 					<Image src={foodImg} shape="rounded"/>
-					<Card.Content verticalAlign="middle">
+					<Card.Content>
 						<Card.Header>
 							{faker.lorem.sentence()}
 						</Card.Header>
@@ -27,7 +27,7 @@ const SideGuide = () => {
 
 				<Card link>
 					<Image src={foodImg} shape="rounded"/>
-					<Card.Content verticalAlign="middle">
+					<Card.Content>
 						<Card.Header>
 							{faker.lorem.sentence()}
 						</Card.Header>
@@ -42,7 +42,7 @@ const SideGuide = () => {
 
 				<Card link>
 					<Image src={foodImg} shape="rounded"/>
-					<Card.Content verticalAlign="middle">
+					<Card.Content>
 						<Card.Header>
 							{faker.lorem.sentence()}
 						</Card.Header>
@@ -57,7 +57,7 @@ const SideGuide = () => {
 
 				<Card link>
 					<Image src={foodImg} shape="rounded"/>
-					<Card.Content verticalAlign="middle">
+					<Card.Content>
 						<Card.Header>
 							{faker.lorem.sentence()}
 						</Card.Header>
@@ -72,7 +72,7 @@ const SideGuide = () => {
 
 				<Card link>
 					<Image src={foodImg} shape="rounded"/>
-					<Card.Content verticalAlign="middle">
+					<Card.Content>
 						<Card.Header>
 							{faker.lorem.sentence()}
 						</Card.Header>
