@@ -1,19 +1,24 @@
 import React from 'react';
 import { Grid, Image, Header, Container } from 'semantic-ui-react';
+import './index.css';
 
 const PlaceHeader = ({place}) => {
+
+	const divBgImage = {
+		background: 'url(' + place.headerImage + ') no-repeat center center',
+	}
+
 	return(
 		<div>
-			<div>
-				<Image src={place.headerImage} fluid />
+			<div style={divBgImage} className="place-header-img" >
 			</div>
 			<div>
 				<Grid padded>
-					<Grid.Column mobile={5} verticalAlign="middle">
-						<Image src={place.logo} fluid />
+					<Grid.Column mobile={5} computer={3} verticalAlign="middle">
+						<Image src={place.logo} fluid  shape="rounded" />
 					</Grid.Column>					
 					<Grid.Column mobile={11} >
-						<Container className="place-header">
+						<Container>
 							<Header as="h1">{place.name}</Header>
 							<p>
 								<small>

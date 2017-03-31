@@ -4,9 +4,11 @@ import PlaceNav from './PlaceNav';
 import PlaceAbout from '../../components/PlaceAbout';
 import PlaceFood from '../../components/PlaceFood';
 import PlaceReview from './PlaceReview';
+import SideGuide from '../../components/SideGuide';
 import faker from 'faker';
+import { Grid } from 'semantic-ui-react';
 
-const foodImg = faker.image.food();
+const foodImg = 'https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg';
 
 const data = {
 	place: {
@@ -95,7 +97,7 @@ class RestaurantDetail extends Component {
 		switch (this.state.selectedNav) {
 			case 'home':
 				return (
-					<div>
+					<div className="menu-container">
 						<PlaceAbout place={data.place} />
 						<PlaceFood foods={data.foods} />
 						<PlaceReview reviews={data.reviews} place={data.place} />
@@ -103,25 +105,25 @@ class RestaurantDetail extends Component {
 				)
 			case 'about':
 				return (
-					<div>
+					<div className="menu-container">
 						<PlaceAbout place={data.place} />
 					</div>
 				)
 			case 'food':
 				return (
-					<div>
+					<div className="menu-container">
 						<PlaceFood foods={data.foods} />
 					</div>
 				)
 			case 'review':
 				return (
-					<div>
+					<div className="menu-container">
 						<PlaceReview reviews={data.reviews} place={data.place} />
 					</div>
 				)
 			default:
 				return (
-					<div>
+					<div className="menu-container">
 						<PlaceAbout place={data.place} />
 						<PlaceFood foods={data.foods} />
 						<PlaceReview reviews={data.reviews} place={data.place} />
@@ -134,11 +136,18 @@ class RestaurantDetail extends Component {
 	render() {
 		return (
 			<div>
-				<PlaceHeader place={data.place} />
-				<PlaceNav 
-					selectedNav={this.state.selectedNav}
-					onNavSelect={this.handleNavSelect} />
-				{this.renderChild()}
+				<Grid className="layout-grid" padded>
+					<Grid.Column mobile={16} computer={12}>
+						<PlaceHeader place={data.place} />
+						<PlaceNav 
+							selectedNav={this.state.selectedNav}
+							onNavSelect={this.handleNavSelect} />
+						{this.renderChild()}
+					</Grid.Column>
+					<Grid.Column computer={4} only="computer">
+						<SideGuide />
+					</Grid.Column>
+				</Grid>
 			</div>
 		)
 	}
