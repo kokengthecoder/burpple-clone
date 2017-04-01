@@ -156,7 +156,7 @@ class RestaurantDetail extends Component {
 	render() {
 		return (
 			<div>
-				{/*<PlaceHeader place={data.place} />*/}
+				<PlaceHeader place={data.place} />
 				<Grid className="layout-grid" padded>
 					<Grid.Column mobile={16} computer={4}>
 						<PlaceNav 

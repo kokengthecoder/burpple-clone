@@ -1,10 +1,37 @@
 .place-header-img {
 	height: 20em;
 	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.place-header {
+	position: absolute;
+	bottom: 1em;
+	color: #FFFFFF;
+	width: 100%;
+}
+
+
+@media screen and (max-width: 767px) {
+	.ui.container {
+		width: 100% !important;
+	}
+	
+	.place-header p {
+		font-size: 80%;
+	}
 }
 
 @media screen and (min-width: 768px) {
 	.place-header-img {
-		margin-top: 5em;
+		height: 30em;
+		background-size: cover;
 	}
+
+	.place-header {
+		padding-top: 15em;
+	}
+
 }

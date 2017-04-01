@@ -1,13 +1,12 @@
 import React from 'react';
 import { Card, Image, Icon } from 'semantic-ui-react';
-import './index.css';
 import faker from 'faker';
 
 const foodImg = 'https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg';
 
 const SideGuide = () => {
 	return (
-		<div className="side-guide">
+		<div>
 			<h3>Recomended Guides</h3>
 			<Card.Group>
 				<Card link>

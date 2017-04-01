@@ -1,31 +1,27 @@
 import React from 'react';
-import { Grid, Image, Header, Container } from 'semantic-ui-react';
+import { Grid, Image, Container } from 'semantic-ui-react';
 import './index.css';
 
 const PlaceHeader = ({place}) => {
 
 	const divBgImage = {
-		background: 'url(' + place.headerImage + ') no-repeat center center',
+		backgroundImage: ' linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.5)), url(' + place.headerImage + ')'
 	}
 
 	return(
-		<div>
-			<div style={divBgImage} className="place-header-img" >
-			</div>
-			<div>
+		<div style={divBgImage} className="place-header-img" >
+			<div className="place-header">
 				<Grid padded>
-					<Grid.Column mobile={5} computer={3} verticalAlign="middle">
+					<Grid.Column computer={4} only="tablet" verticalAlign="middle">
 						<Image src={place.logo} fluid  shape="rounded" />
 					</Grid.Column>					
-					<Grid.Column mobile={11} >
+					<Grid.Column mobile={11} verticalAlign="middle">
 						<Container>
-							<Header as="h1">{place.name}</Header>
+							<h1>{place.name}</h1>
 							<p>
-								<small>
-									{place.total_reviews} reviews 
-									&bull; &nbsp;
-									{place.total_wishlisted} wishlisted
-								</small>
+								{place.total_reviews} reviews 
+								&bull; &nbsp;
+								{place.total_wishlisted} wishlisted
 							</p>
 						</Container>
 					</Grid.Column>
