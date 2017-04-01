@@ -36,6 +36,26 @@ const data = {
 		price: faker.commerce.price(),
 		image: foodImg,
 		total_reviews: faker.random.number()
+	},{
+		name: faker.lorem.words(),
+		price: faker.commerce.price(),
+		image: foodImg,
+		total_reviews: faker.random.number()
+	},{
+		name: faker.lorem.words(),
+		price: faker.commerce.price(),
+		image: foodImg,
+		total_reviews: faker.random.number()
+	},{
+		name: faker.lorem.words(),
+		price: faker.commerce.price(),
+		image: foodImg,
+		total_reviews: faker.random.number()
+	},{
+		name: faker.lorem.words(),
+		price: faker.commerce.price(),
+		image: foodImg,
+		total_reviews: faker.random.number()
 	}],
 	reviews: [{
 		reviwer: {

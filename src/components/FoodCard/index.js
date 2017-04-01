@@ -17,7 +17,9 @@ const FoodCard = ({food}) => (
 				{food.name}
 			</Card.Header>
 			<Card.Meta>
-				{food.total_reviews} reviews
+				<small>
+					{food.total_reviews} reviews
+				</small>
 			</Card.Meta>
 		</Card.Content>
 	</Card>
