@@ -7,6 +7,7 @@ import PlaceReview from './PlaceReview';
 import SideGuide from '../../components/SideGuide';
 import faker from 'faker';
 import { Grid } from 'semantic-ui-react';
+import './index.css';
 
 const foodImg = 'https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg';
 
@@ -117,7 +118,7 @@ class RestaurantDetail extends Component {
 		switch (this.state.selectedNav) {
 			case 'home':
 				return (
-					<div className="menu-container">
+					<div className="place-menu-container">
 						<PlaceAbout place={data.place} />
 						<PlaceFood foods={data.foods} />
 						<PlaceReview reviews={data.reviews} place={data.place} />
@@ -125,25 +126,25 @@ class RestaurantDetail extends Component {
 				)
 			case 'about':
 				return (
-					<div className="menu-container">
+					<div className="place-menu-container">
 						<PlaceAbout place={data.place} />
 					</div>
 				)
 			case 'food':
 				return (
-					<div className="menu-container">
+					<div className="place-menu-container">
 						<PlaceFood foods={data.foods} />
 					</div>
 				)
 			case 'review':
 				return (
-					<div className="menu-container">
+					<div className="place-menu-container">
 						<PlaceReview reviews={data.reviews} place={data.place} />
 					</div>
 				)
 			default:
 				return (
-					<div className="menu-container">
+					<div className="place-menu-container">
 						<PlaceAbout place={data.place} />
 						<PlaceFood foods={data.foods} />
 						<PlaceReview reviews={data.reviews} place={data.place} />
@@ -155,7 +156,7 @@ class RestaurantDetail extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="page-layout">
 				<PlaceHeader place={data.place} />
 				<Grid className="layout-grid" padded>
 					<Grid.Column mobile={16} tablet={5} computer={4}>
