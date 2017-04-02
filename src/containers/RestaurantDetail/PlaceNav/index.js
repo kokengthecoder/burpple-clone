@@ -10,8 +10,6 @@ const PlaceNav = ({ selectedNav, onNavSelect }) => {
 
 	const MenuNav = ({styleProps}) => {
 
-		console.log(styleProps);
-
 		return (
 			<Menu className={styleProps} >
 				<Menu.Item name="home" active={selectedNav === "home"} onClick={handleItemClick} />

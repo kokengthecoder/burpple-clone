@@ -158,12 +158,12 @@ class RestaurantDetail extends Component {
 			<div>
 				<PlaceHeader place={data.place} />
 				<Grid className="layout-grid" padded>
-					<Grid.Column mobile={16} computer={4}>
+					<Grid.Column mobile={16} tablet={5} computer={4}>
 						<PlaceNav 
 							selectedNav={this.state.selectedNav}
 							onNavSelect={this.handleNavSelect} />
 					</Grid.Column>
-					<Grid.Column mobile={16} computer={8}>
+					<Grid.Column mobile={16} tablet={11} computer={8}>
 
 						{this.renderChild()}
 					</Grid.Column>
