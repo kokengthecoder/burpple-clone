@@ -1,0 +1,13 @@
+.header-nav-large {
+	display: none !important;
+}
+
+@media screen and (min-width: 1024px) {
+	.header-nav-large {
+		display: flex !important;
+	}
+
+	.header-nav-small {
+		display: none !important;
+	}
+}
