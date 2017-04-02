@@ -16,7 +16,7 @@ const renderFoodCard = (foods, num) => {
 	// render into card 
 	const rendered = slice.map((food) => {
 		return (
-			<Grid.Column stretched mobile={8} tablet={4} computer={4}>
+			<Grid.Column stretched mobile={8} tablet={8} computer={8}>
 				<FoodCard food={food} />
 			</Grid.Column>
 		)
@@ -31,7 +31,7 @@ const PlaceFood = ({foods}) => {
 			<h4>
 				Foods 
 			</h4>
-			<MediaQuery minDeviceWidth={768}>
+			<MediaQuery minWidth={768}>
 				{(matches) => {
 					if(matches) {
 						return <Grid>{renderFoodCard(foods, 4)}</Grid>

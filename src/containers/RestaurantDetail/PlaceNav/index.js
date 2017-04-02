@@ -9,7 +9,6 @@ const PlaceNav = ({ selectedNav, onNavSelect }) => {
 	}
 
 	const MenuNav = ({styleProps}) => {
-
 		return (
 			<Menu className={styleProps} >
 				<Menu.Item name="home" active={selectedNav === "home"} onClick={handleItemClick} />
@@ -22,7 +21,7 @@ const PlaceNav = ({ selectedNav, onNavSelect }) => {
 
 	return (
 		<div>
-			<MediaQuery minDeviceWidth={768}>
+			<MediaQuery minWidth={768}>
 			{(matches) => {
 				if(matches) {
 					return <MenuNav styleProps="fluid vertical tabular" />
