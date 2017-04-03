@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image, Icon, Menu, Feed, Container } from 'semantic-ui-react';
+import { Card, Image, Icon, Menu, Feed } from 'semantic-ui-react';
 import './index.css';
 
 const ReviewCard = ({review, place}) => {

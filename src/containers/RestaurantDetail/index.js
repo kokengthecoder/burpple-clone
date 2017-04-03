@@ -5,7 +5,6 @@ import PlaceAbout from '../../components/PlaceAbout';
 import PlaceFood from '../../components/PlaceFood';
 import PlaceReview from './PlaceReview';
 import SideGuide from '../../components/SideGuide';
-import faker from 'faker';
 import { Grid } from 'semantic-ui-react';
 import './index.css';
 import data from '../../data';
