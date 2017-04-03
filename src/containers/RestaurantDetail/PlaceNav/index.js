@@ -21,7 +21,7 @@ const PlaceNav = ({ selectedNav, onNavSelect }) => {
 
 	return (
 		<div>
-			<MediaQuery minWidth={768}>
+			<MediaQuery minWidth={998}>
 			{(matches) => {
 				if(matches) {
 					return <MenuNav styleProps="fluid vertical tabular" />
