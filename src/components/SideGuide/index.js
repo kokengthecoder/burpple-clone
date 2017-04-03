@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Image, Icon } from 'semantic-ui-react';
 import faker from 'faker';
 
-const foodImg = 'https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg';
+const foodImg = 'https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?h=350&auto=compress&cs=tinysrgb';
 
 const SideGuide = () => {
 	return (
